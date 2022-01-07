@@ -14,4 +14,99 @@ body {
   overflow-x: hidden;
   height: 100%;
 }
+
+@media only screen and (max-width: 768px) {
+  .grid {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  body {
+    background: #FFFFFF;
+  }
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 100px 60vh 20vh;
+        grid-template-rows: 100px 60vh 20vh;
+    grid-gap: 10px;
+        grid-template-areas: "header   header   header" "main     main     sidebar" "footer   footer   footer";
+  }
+  /* items */
+  .grid div {
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+  }
+  /* specific item styles */
+  .item-1 {
+    background: #4B2840;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+  }
+  .item-2 {
+    background: #C799A6;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: main;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    grid-gap: 20px;
+        grid-template-areas: "header header" "sidebar sidebar";
+  }
+  .item-3 {
+    background: #30997a;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: sidebar;
+  }
+  .item-4 {
+    background: #EEABC4;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: footer;
+  }
+  .item-5 {
+    background: #E15A97;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+  }
+  .item-6 {
+    background: #861388;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: sidebar;
+  }
+  .item-7 {
+    background: #E15A97;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: header;
+  }
+  .item-8 {
+    background: #861388;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: sidebar;
+  }
+}
 /*# sourceMappingURL=main.css.map */
